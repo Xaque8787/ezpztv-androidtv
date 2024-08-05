@@ -93,7 +93,7 @@ class UserPreferences(context: Context) : SharedPreferenceStore(
 		/**
 		 * Preferred video player.
 		 */
-		var videoPlayer = enumPreference("video_player", PreferredVideoPlayer.EXOPLAYER)
+		var videoPlayer = enumPreference("video_player", PreferredVideoPlayer.VLC)
 
 		/**
 		 * Change refresh rate to match media when device supports it
@@ -135,12 +135,12 @@ class UserPreferences(context: Context) : SharedPreferenceStore(
 		/**
 		 * Use direct play
 		 */
-		var liveTvDirectPlayEnabled = booleanPreference("pref_live_direct", true)
+		var liveTvDirectPlayEnabled = booleanPreference("pref_live_direct", false)
 
 		/**
 		 * Preferred video player for live TV
 		 */
-		var liveTvVideoPlayer = enumPreference("live_tv_video_player", PreferredVideoPlayer.AUTO)
+		var liveTvVideoPlayer = enumPreference("live_tv_video_player", PreferredVideoPlayer.VLC)
 
 		/**
 		 * Shortcut used for changing the audio track
