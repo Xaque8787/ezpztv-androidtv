@@ -1,6 +1,6 @@
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-rootProject.name = "jellyfin-androidtv"
+rootProject.name = "ezpztv-androidtv"
 
 // Application
 include(":app")
