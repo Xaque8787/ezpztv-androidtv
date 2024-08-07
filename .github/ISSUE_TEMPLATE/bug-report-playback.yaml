@@ -26,7 +26,7 @@ body:
       label: Logs
       description: |
         Please paste your crash logs here if applicable. You can find these in your servers dashboard under "logs".
-        The file name should start with "upload_org.jellyfin.androidtv".
+        The file name should start with "upload_org.ezpztv.androidtv".
         Make sure that they don't contain any sensitive information like server URL, auth tokens or passwords.
       placeholder: Paste logs…
   - type: textarea

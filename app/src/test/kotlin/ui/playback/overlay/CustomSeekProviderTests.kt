@@ -1,4 +1,4 @@
-package org.jellyfin.androidtv.ui.playback.overlay
+package org.ezpztv.androidtv.ui.playback.overlay
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
