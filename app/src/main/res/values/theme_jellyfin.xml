@@ -57,34 +57,34 @@
         <item name="controlIconForegroundInactive">@color/button_default_highlight_background</item>
 
         <!-- QR drawables -->
-        <item name="qrBackground">@color/white</item>
-        <item name="qrForeground">@color/black</item>
+        <item name="qrBackground">@color/black</item>
+        <item name="qrForeground">@color/jellyfin_blue</item>
 
         <!-- Tile colors -->
-        <item name="tile_port_person_bg">@color/indigo_dye</item>
-        <item name="tile_user_bg">@color/indigo_dye</item>
-        <item name="tile_port_video_bg">@color/indigo_dye</item>
-        <item name="tile_land_folder_bg">@color/indigo_dye</item>
-        <item name="tile_chapter_bg">@color/indigo_dye</item>
-        <item name="tile_land_tv_bg">@color/indigo_dye</item>
-        <item name="tile_port_tv_bg">@color/indigo_dye</item>
-        <item name="tile_actors_bg">@color/indigo_dye</item>
-        <item name="tile_land_photo_bg">@color/indigo_dye</item>
-        <item name="tile_port_folder_bg">@color/indigo_dye</item>
-        <item name="tile_land_series_timer_bg">@color/indigo_dye</item>
+        <item name="tile_port_person_bg">@color/black</item>
+        <item name="tile_user_bg">@color/black</item>
+        <item name="tile_port_video_bg">@color/black</item>
+        <item name="tile_land_folder_bg">@color/black</item>
+        <item name="tile_chapter_bg">@color/black</item>
+        <item name="tile_land_tv_bg">@color/black</item>
+        <item name="tile_port_tv_bg">@color/black</item>
+        <item name="tile_actors_bg">@color/black</item>
+        <item name="tile_land_photo_bg">@color/black</item>
+        <item name="tile_port_folder_bg">@color/black</item>
+        <item name="tile_land_series_timer_bg">@color/black</item>
 
-        <item name="tile_audio_bg">@color/midnight_blue</item>
-        <item name="tile_artists_bg">@color/spanish_blue</item>
-        <item name="tile_genres_bg">@color/midnight_blue</item>
-        <item name="tile_search_bg">@color/spanish_blue</item>
+        <item name="tile_audio_bg">@color/black</item>
+        <item name="tile_artists_bg">@color/black</item>
+        <item name="tile_genres_bg">@color/black</item>
+        <item name="tile_search_bg">@color/black</item>
 
-        <item name="tile_suggestions_bg">@color/spanish_blue</item>
-        <item name="tile_port_grid_bg">@color/midnight_blue</item>
-        <item name="tile_letters_bg">@color/spanish_blue</item>
+        <item name="tile_suggestions_bg">@color/black</item>
+        <item name="tile_port_grid_bg">@color/black</item>
+        <item name="tile_letters_bg">@color/black</item>
 
-        <item name="tile_port_guide_bg">@color/spanish_blue</item>
-        <item name="tile_port_series_timer_bg">@color/midnight_blue</item>
-        <item name="tile_port_time_bg">@color/spanish_blue</item>
+        <item name="tile_port_guide_bg">@color/black</item>
+        <item name="tile_port_series_timer_bg">@color/black</item>
+        <item name="tile_port_time_bg">@color/black</item>
     </style>
 
     <style name="Theme.Jellyfin.Preferences" parent="Theme.Jellyfin">
