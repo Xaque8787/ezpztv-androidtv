@@ -444,12 +444,9 @@
     <string name="lbl_quality_profile">Профиль качества</string>
     <string name="desc_audio_night_mode">Автоматически выравнивает громкость звука</string>
     <string name="pref_audio_night_mode">Ночной аудиорежим (экспериментальный)</string>
-    <string name="lbl_subtitle_stroke">Цвет обводки субтитров</string>
     <string name="color_yellow">Жёлтый</string>
     <string name="app_notification_beta">Приложение обновлено до версии %1$s
 \nСпасибо вам за участие в бета-тестировании Jellyfin.</string>
-    <string name="lbl_subtitle_fg">Цвет текста субтитров</string>
-    <string name="lbl_subtitle_position">Отступ субтитров от низа</string>
     <string name="color_white">Белый</string>
     <string name="color_black">Чёрный</string>
     <string name="color_darkgrey">Тёмно-серый</string>
@@ -527,4 +524,6 @@
     <string name="pref_screensaver_ageratingrequired_enabled">Показывать только товары с установленным возрастным рейтингом</string>
     <string name="pref_screensaver_ageratingrequired_disabled">Показать все товары</string>
     <string name="lbl_runtime">Среда выполнения</string>
+    <string name="lbl_subtitle_background_color">Цвет фона субтитров</string>
+    <string name="lbl_subtitle_text_color">Цвет текста субтитров</string>
 </resources>
