@@ -41,10 +41,10 @@
     <color name="guide_kids_bg">#32039BE5</color>
 
     <!-- button_default -->
-    <color name="button_default_normal_background">#AA0000</color>
+    <color name="button_default_normal_background">#000000</color>
     <color name="button_default_disabled_background">#33747474</color>
-    <color name="button_default_highlight_background">#000000</color>
-    <color name="button_default_normal_text">#000000</color>
+    <color name="button_default_highlight_background">#AA0000</color>
+    <color name="button_default_normal_text">#AA0000</color>
     <color name="button_default_disabled_text">#686868</color>
     <color name="button_default_highlight_text">#DDDDDD</color>
     <color name="button_default_activated_text">#AA0000</color>
