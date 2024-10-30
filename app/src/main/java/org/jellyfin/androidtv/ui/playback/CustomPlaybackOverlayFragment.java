@@ -123,6 +123,7 @@ public class CustomPlaybackOverlayFragment extends Fragment implements LiveTvGui
     private boolean mFadeEnabled = false;
     private boolean mIsVisible = false;
     private boolean mPopupPanelVisible = false;
+    private boolean navigating = false;
 
     private LeanbackOverlayFragment leanbackOverlayFragment;
 
@@ -292,14 +293,19 @@ public class CustomPlaybackOverlayFragment extends Fragment implements LiveTvGui
             return null;
         });
 
-        requireActivity().getOnBackPressedDispatcher().addCallback(backPressedCallback);
-
         int startPos = getArguments().getInt("Position", 0);
 
         // start playing
         playbackControllerContainer.getValue().getPlaybackController().play(startPos);
         leanbackOverlayFragment.updatePlayState();
 
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+
+        requireActivity().getOnBackPressedDispatcher().addCallback(this, backPressedCallback);
     }
 
     private void prepareOverlayFragment() {
@@ -379,7 +385,6 @@ public class CustomPlaybackOverlayFragment extends Fragment implements LiveTvGui
     };
 
     private OnBackPressedCallback backPressedCallback = new OnBackPressedCallback(true) {
-
         @Override
         public void handleOnBackPressed() {
             if (mPopupPanelVisible) {
@@ -642,12 +647,7 @@ public class CustomPlaybackOverlayFragment extends Fragment implements LiveTvGui
 >>>>>>> upstream/master
         PlaybackController playbackController = playbackControllerContainer.getValue().getPlaybackController();
         if (playbackController == null || !playbackController.hasFragment()) {
-            if (navigationRepository.getValue().getCanGoBack()) {
-                navigationRepository.getValue().goBack();
-            } else {
-                navigationRepository.getValue().reset(Destinations.INSTANCE.getHome());
-            }
-
+            closePlayer();
             return;
         }
 
@@ -679,10 +679,6 @@ public class CustomPlaybackOverlayFragment extends Fragment implements LiveTvGui
 
         if (leanbackOverlayFragment != null)
             leanbackOverlayFragment.setOnKeyInterceptListener(null);
-        if (backPressedCallback != null) {
-            backPressedCallback.remove();
-            backPressedCallback = null;
-        }
 
         // end playback from here if this fragment belongs to the current session.
         // if it doesn't, playback has already been stopped elsewhere, and the references to this have been replaced
@@ -690,6 +686,8 @@ public class CustomPlaybackOverlayFragment extends Fragment implements LiveTvGui
             Timber.d("this fragment belongs to the current session, ending it");
             playbackControllerContainer.getValue().getPlaybackController().endPlayback();
         }
+
+        closePlayer();
     }
 
     public void show() {
@@ -1269,6 +1267,9 @@ public class CustomPlaybackOverlayFragment extends Fragment implements LiveTvGui
     }
 
     public void closePlayer() {
+        if (navigating) return;
+        navigating = true;
+
         if (navigationRepository.getValue().getCanGoBack()) {
             navigationRepository.getValue().goBack();
         } else {
@@ -1277,6 +1278,9 @@ public class CustomPlaybackOverlayFragment extends Fragment implements LiveTvGui
     }
 
     public void showNextUp(@NonNull UUID id) {
+        if (navigating) return;
+        navigating = true;
+
         navigationRepository.getValue().navigate(Destinations.INSTANCE.nextUp(id), true);
     }
 
