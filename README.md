@@ -29,13 +29,13 @@
 <img alt="Join our Subreddit" src="https://img.shields.io/badge/reddit-r%2Fjellyfin-%23FF5700.svg"/>
 </a>
 <br/>
-<a href="https://play.google.com/store/apps/details?id=org.jellyfin.androidtv">
+<a href="https://play.google.com/store/apps/details?id=org.ezpztv.androidtv">
 <img width="153" alt="Jellyfin on Google Play" src="https://jellyfin.org/images/store-icons/google-play.png"/>
 </a>
 <a href="https://www.amazon.com/gp/aw/d/B07TX7Z725">
 <img width="153" alt="Jellyfin on Amazon Appstore" src="https://jellyfin.org/images/store-icons/amazon.png"/>
 </a>
-<a href="https://f-droid.org/en/packages/org.jellyfin.androidtv/">
+<a href="https://f-droid.org/en/packages/org.ezpztv.androidtv/">
 <img width="153" alt="Jellyfin on F-Droid" src="https://jellyfin.org/images/store-icons/fdroid.png"/>
 </a>
 <br/>

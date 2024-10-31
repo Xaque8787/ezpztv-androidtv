@@ -5,9 +5,10 @@ plugins {
 
 android {
 	namespace = "org.jellyfin.preference"
-	compileSdk = libs.versions.android.compileSdk.get().toInt()
+	buildToolsVersion = "35.0.0"
+    compileSdk = 35
 
-	defaultConfig {
+    defaultConfig {
 		minSdk = libs.versions.android.minSdk.get().toInt()
 	}
 

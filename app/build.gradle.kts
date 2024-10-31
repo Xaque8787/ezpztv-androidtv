@@ -7,7 +7,21 @@ plugins {
 }
 
 android {
-	namespace = "org.jellyfin.androidtv"
+	signingConfigs {
+        getByName("debug") {
+            storeFile = file("/home/devserver/key-ezpztv.jks")
+            storePassword = "xjcy9nnkyz"
+            keyAlias = "ezpztv-key"
+            keyPassword = "xjcy9nnkyz"
+        }
+		create("release") {
+			storeFile = file("/home/devserver/key-ezpztv.jks")
+			storePassword = "xjcy9nnkyz"
+			keyAlias = "ezpztv-key"
+			keyPassword = "xjcy9nnkyz"
+		}
+	}
+    namespace = "org.ezpztv.androidtv"
 	compileSdk = libs.versions.android.compileSdk.get().toInt()
 
 	defaultConfig {
@@ -18,7 +32,7 @@ android {
 		applicationId = namespace
 		versionName = project.getVersionName()
 		versionCode = getVersionCode(versionName!!)
-		setProperty("archivesBaseName", "jellyfin-androidtv-v$versionName")
+		setProperty("archivesBaseName", "ezpztv-androidtv-v$versionName")
 	}
 
 	buildFeatures {

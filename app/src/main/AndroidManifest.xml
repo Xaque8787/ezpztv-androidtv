@@ -38,7 +38,7 @@
     </queries>
 
     <application
-        android:name=".JellyfinApplication"
+        android:name=".ezpztvApplication"
         android:allowBackup="true"
         android:appCategory="video"
         android:banner="@mipmap/app_banner"
@@ -82,13 +82,13 @@
             android:initOrder="1000"
             tools:node="merge">
             <meta-data
-                android:name="org.jellyfin.androidtv.LogInitializer"
+                android:name="org.ezpztv.androidtv.LogInitializer"
                 android:value="androidx.startup" />
             <meta-data
-                android:name="org.jellyfin.androidtv.di.KoinInitializer"
+                android:name="org.ezpztv.androidtv.di.KoinInitializer"
                 android:value="androidx.startup" />
             <meta-data
-                android:name="org.jellyfin.androidtv.SessionInitializer"
+                android:name="org.ezpztv.androidtv.SessionInitializer"
                 android:value="androidx.startup" />
         </provider>
 

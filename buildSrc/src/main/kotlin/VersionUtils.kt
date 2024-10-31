@@ -11,7 +11,7 @@ import org.gradle.api.Project
  * null -> 0.0.0-dev.1 (unless different fallback set)
  */
 fun Project.getVersionName(fallback: String = "0.0.0-dev.1") =
-	getProperty("jellyfin.version")
+	getProperty("ezpztv.version")
 		?.removePrefix("v")
 		?: fallback
 
