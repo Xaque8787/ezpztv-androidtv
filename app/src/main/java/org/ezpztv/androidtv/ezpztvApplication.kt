@@ -19,7 +19,7 @@ import org.koin.android.ext.android.inject
 import java.util.concurrent.TimeUnit
 
 @Suppress("unused")
-class JellyfinApplication : Application() {
+class ezpztvApplication : Application() {
 	override fun onCreate() {
 		super.onCreate()
 

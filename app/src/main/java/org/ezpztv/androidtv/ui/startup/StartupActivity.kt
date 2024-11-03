@@ -22,7 +22,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
-import org.ezpztv.androidtv.JellyfinApplication
+import org.ezpztv.androidtv.ezpztvApplication
 import org.ezpztv.androidtv.R
 import org.ezpztv.androidtv.auth.repository.SessionRepository
 import org.ezpztv.androidtv.auth.repository.SessionRepositoryState
@@ -137,7 +137,7 @@ class StartupActivity : FragmentActivity() {
 		Timber.d("Determining next activity (action=${intent.action}, itemId=$itemId, itemIsUserView=$itemIsUserView)")
 
 		// Start session
-		(application as? JellyfinApplication)?.onSessionStart()
+		(application as? ezpztvApplication)?.onSessionStart()
 
 		// Create destination
 		val destination = when {
