@@ -33,7 +33,7 @@ class UserPreferences(context: Context) : SharedPreferenceStore(
 		/**
 		 * Select the app theme
 		 */
-		var appTheme = enumPreference("app_theme", AppTheme.DARK)
+		var appTheme = enumPreference("app_theme", AppTheme.ezred)
 
 		/**
 		 * Enable background images while browsing
@@ -113,7 +113,7 @@ class UserPreferences(context: Context) : SharedPreferenceStore(
 		/**
 		 * Use direct play
 		 */
-		var liveTvDirectPlayEnabled = booleanPreference("pref_live_direct", true)
+		var liveTvDirectPlayEnabled = booleanPreference("pref_live_direct", false)
 
 		/**
 		 * Shortcut used for changing the audio track
