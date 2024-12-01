@@ -1,0 +1,39 @@
+package org.ezpztv.androidtv.ui.playback
+
+import org.ezpztv.androidtv.preference.UserPreferences
+import org.ezpztv.androidtv.ui.navigation.Destination
+import org.ezpztv.androidtv.ui.navigation.Destinations
+import org.jellyfin.sdk.model.api.BaseItemKind
+
+interface PlaybackLauncher {
+	fun useExternalPlayer(itemType: BaseItemKind?): Boolean
+	fun getPlaybackDestination(itemType: BaseItemKind?, position: Int): Destination
+}
+
+class GarbagePlaybackLauncher(
+	private val userPreferences: UserPreferences
+) : PlaybackLauncher {
+	override fun useExternalPlayer(itemType: BaseItemKind?) = when (itemType) {
+		BaseItemKind.MOVIE,
+		BaseItemKind.EPISODE,
+		BaseItemKind.VIDEO,
+		BaseItemKind.SERIES,
+		BaseItemKind.SEASON,
+		BaseItemKind.RECORDING,
+		BaseItemKind.TV_CHANNEL,
+		BaseItemKind.PROGRAM,
+		-> userPreferences[UserPreferences.useExternalPlayer]
+
+		else -> false
+	}
+
+	override fun getPlaybackDestination(itemType: BaseItemKind?, position: Int) = when {
+		useExternalPlayer(itemType) -> Destinations.externalPlayer(position)
+		else -> Destinations.videoPlayer(position)
+	}
+}
+
+class RewritePlaybackLauncher : PlaybackLauncher {
+	override fun useExternalPlayer(itemType: BaseItemKind?) = false
+	override fun getPlaybackDestination(itemType: BaseItemKind?, position: Int) = Destinations.playbackRewritePlayer(position)
+}

@@ -38,7 +38,7 @@
     </queries>
 
     <application
-        android:name=".JellyfinApplication"
+        android:name=".ezpztvApplication"
         android:allowBackup="true"
         android:appCategory="video"
         android:banner="@mipmap/app_banner"
@@ -48,7 +48,7 @@
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Jellyfin"
+        android:theme="@style/Theme.ezred"
         android:usesCleartextTraffic="true">
 
         <!-- Legacy service required for AccountManagerMigration -->
@@ -82,13 +82,13 @@
             android:initOrder="1000"
             tools:node="merge">
             <meta-data
-                android:name="org.jellyfin.androidtv.LogInitializer"
+                android:name="org.ezpztv.androidtv.LogInitializer"
                 android:value="androidx.startup" />
             <meta-data
-                android:name="org.jellyfin.androidtv.di.KoinInitializer"
+                android:name="org.ezpztv.androidtv.di.KoinInitializer"
                 android:value="androidx.startup" />
             <meta-data
-                android:name="org.jellyfin.androidtv.SessionInitializer"
+                android:name="org.ezpztv.androidtv.SessionInitializer"
                 android:value="androidx.startup" />
         </provider>
 
@@ -139,7 +139,7 @@
         <activity
             android:name=".ui.preference.PreferencesActivity"
             android:screenOrientation="behind"
-            android:theme="@style/Theme.Jellyfin.Preferences" />
+            android:theme="@style/Theme.ezred.Preferences" />
 
         <activity android:name=".ui.playback.ExternalPlayerActivity" />
     </application>

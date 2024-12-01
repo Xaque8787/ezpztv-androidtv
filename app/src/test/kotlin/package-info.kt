@@ -1,1 +1,1 @@
-package org.jellyfin.androidtv
+package org.ezpztv.androidtv

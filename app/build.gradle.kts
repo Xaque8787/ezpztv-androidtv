@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-	namespace = "org.jellyfin.androidtv"
+	namespace = "org.ezpztv.androidtv"
 	compileSdk = libs.versions.android.compileSdk.get().toInt()
 
 	defaultConfig {
@@ -18,7 +18,7 @@ android {
 		applicationId = namespace
 		versionName = project.getVersionName()
 		versionCode = getVersionCode(versionName!!)
-		setProperty("archivesBaseName", "jellyfin-androidtv-v$versionName")
+		setProperty("archivesBaseName", "ezpztv-androidtv-v$versionName")
 	}
 
 	buildFeatures {

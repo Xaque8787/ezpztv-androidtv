@@ -56,7 +56,8 @@
     <color name="input_default_normal_text">#DDDDDD</color>
     <color name="input_default_disabled_text">#686868</color>
     <color name="input_default_highlight_text">#444444</color>
-
+    <!-- ezred theme -->
+    <color name="ezred">#d40000</color>color
     <!-- popup_menu -->
     <color name="popup_menu_background">#202124</color>
 
